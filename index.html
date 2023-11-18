@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Avoid the Asteroids!</title>
+   <link rel="stylesheet" href="index.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <img src="images/background.png" alt="Background" id="backgroundImage"/>
+   <canvas id="gameCanvas"> Your browser does not support the HTML5 canvas tag. </canvas>
+   <!-- popup for game settings on start -->
+   <div id="startModal" class="modal">
+      <div class="modal-content">
+        <h2>Avoid the Asteroids</h2>
+        <label for="SpaceShipSlider">SpaceShip Speed:</label>
+        <input type="range" id="SpaceShipSlider" name="SpaceShipSlider" min="1" max="20">
+        <label for="AsteroidCountSlider">Asteroid Count:</label>
+        <input type="range" id="AsteroidCountSlider" name="AsteroidCountSlider" min="1" max="30">
+        <label for="Bounds enabled">Bounds enabled:</label>
+        <input title="Bounds" type="checkbox" id="Bounds" name="Bounds" value="Bounds">
+        <button type="button" id="startButton">Start Game!</button>
+      </div>
+    </div>
+   <!-- popup for restart game -->
+   <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <h2>Game Over!</h2>
+        <h3 id="highScore"></h3>
+        <h3 id="score"></h3>
+        <button id="restartButton">Restart Game!</button>
+      </div>
+   </div>
+   <script src="index.js"></script>
+</body>
+
+</html>
